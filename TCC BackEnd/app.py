@@ -1,4 +1,3 @@
-from re import S
 import sqlite3
 from flask import Flask , jsonify
 from flask_cors import CORS
