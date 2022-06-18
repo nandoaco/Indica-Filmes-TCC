@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+}
+h1{
+    color: orangered
+}
+#titulo {
+    margin: center;
+    text-align: center;
+}
+#subtitulo {
+    margin: center;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+
+}
