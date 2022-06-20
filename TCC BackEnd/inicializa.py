@@ -13,7 +13,7 @@ cursor = conexao.cursor()
 consulta = """CREATE TABLE Filmes (
     id INTEGER AUTO_INCREMENT, 
     titulo TEXT,
-    imagem TEXT,
+    imagem BLOB,
     sinopse TEXT
     )"""
 

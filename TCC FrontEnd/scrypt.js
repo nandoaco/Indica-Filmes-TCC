@@ -9,10 +9,10 @@ function carregarDados(){
        })
     
         .then(function(ListaFilmes){
-         popularTabela(ListaFilmes)
+         popularTabela(ListaFilmes);
     })
 }
-        
+carregarDados();
  function popularTabela(ListaFilmes){
     const tamanhoLista = ListaFilmes.length;
     
@@ -23,19 +23,24 @@ function carregarDados(){
          const titulo = document.createElement('td');
          const imagem = document.createElement('td');
          const sinopse= document.createElement('td');
-         
+
          id.innerHTML = ListaFilmes[index][0];
-         titulo.innerHTML = ListaFilmes[index][1];
-         imagem.innerHTML = ListaFilmes[index][2];
+         titulo.innerHTML = ListaFilmes[index][1]
+        //  imagem.innerHTML = ListaFilmes[index][2];
          sinopse.innerHTML = ListaFilmes[index][3];
+
+         const img =document.createElement('img');
+         img.setAttribute('src','./' + ListaFilmes[index][2]);
+        
          
          linha.appendChild(id);
          linha.appendChild(titulo);
-         linha.appendChild(imagem);
+         linha.appendChild(img);
          linha.appendChild(sinopse);
          
 
          tabela.appendChild(linha);
+       
         
      }
  }
