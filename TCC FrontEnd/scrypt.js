@@ -24,15 +24,17 @@ carregarDados();
          const titulo = document.createElement('td');
          const imagem = document.createElement('td');
          const sinopse= document.createElement('td');
+         const fichaTécnica= document.createElement('td');
 
         //  id.innerHTML = ListaFilmes[index][0];
          titulo.innerHTML = ListaFilmes[index][1]
         //  imagem.innerHTML = ListaFilmes[index][2];
          sinopse.innerHTML = ListaFilmes[index][3];
-
+         
          const link = document.createElement('a');
          link.setAttribute('href', ListaFilmes[index][4]);
          link.setAttribute('target', '_blank');
+         fichaTécnica.innerHTML = ListaFilmes [index][5];
 
          const img = document.createElement('img');
          img.setAttribute('src','./' + ListaFilmes[index][2]);
@@ -43,7 +45,7 @@ carregarDados();
          linha.appendChild(titulo);
          linha.appendChild(link);
          linha.appendChild(sinopse);
-         
+         linha.appendChild(fichaTécnica);
 
          tabela.appendChild(linha);
        

@@ -15,7 +15,8 @@ consulta = """CREATE TABLE Filmes (
     titulo TEXT,
     imagem BLOB,
     sinopse TEXT,
-    link TEXT
+    link TEXT,
+    ficha técnica TEXT
     )"""
 
 cursor.execute(consulta)
