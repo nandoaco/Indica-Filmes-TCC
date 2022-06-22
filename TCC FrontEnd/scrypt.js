@@ -14,28 +14,34 @@ function carregarDados(){
 }
 carregarDados();
  function popularTabela(ListaFilmes){
+    console.log(ListaFilmes);
     const tamanhoLista = ListaFilmes.length;
     
      for(let index = 0; index < tamanhoLista; index ++){
         const linha = document.createElement('tr');
 
-         const id = document.createElement('td');
+        //  const id = document.createElement('td');
          const titulo = document.createElement('td');
          const imagem = document.createElement('td');
          const sinopse= document.createElement('td');
 
-         id.innerHTML = ListaFilmes[index][0];
+        //  id.innerHTML = ListaFilmes[index][0];
          titulo.innerHTML = ListaFilmes[index][1]
         //  imagem.innerHTML = ListaFilmes[index][2];
          sinopse.innerHTML = ListaFilmes[index][3];
 
-         const img =document.createElement('img');
+         const link = document.createElement('a');
+         link.setAttribute('href', ListaFilmes[index][4]);
+         link.setAttribute('target', '_blank');
+
+         const img = document.createElement('img');
          img.setAttribute('src','./' + ListaFilmes[index][2]);
+
+         link.appendChild(img);
         
-         
-         linha.appendChild(id);
+        //  linha.appendChild(id);
          linha.appendChild(titulo);
-         linha.appendChild(img);
+         linha.appendChild(link);
          linha.appendChild(sinopse);
          
 

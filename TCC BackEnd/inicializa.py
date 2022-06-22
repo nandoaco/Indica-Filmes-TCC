@@ -14,7 +14,8 @@ consulta = """CREATE TABLE Filmes (
     id INTEGER AUTO_INCREMENT, 
     titulo TEXT,
     imagem BLOB,
-    sinopse TEXT
+    sinopse TEXT,
+    link TEXT
     )"""
 
 cursor.execute(consulta)
